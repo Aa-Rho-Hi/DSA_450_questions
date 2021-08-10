@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int n,arr[n];
+cout<<"Enter number of elements:";
+cin>>n;
+cout<<"enter elements of array";
+for(int i=0;i<n;i++)
+{
+	cin>>arr[i];
+}
+int k;
+cout<<"enter the largest element you want";
+cin>>k;
+priority_queue<int> qu;
+for(int i=0;i<n;i++){
+	qu.push(arr[i]);
+	if(qu.size()>k)
+	qu.pop();
+}
+cout<<qu.top();
+
+return 0;
+}
